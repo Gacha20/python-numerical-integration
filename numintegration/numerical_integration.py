@@ -27,7 +27,7 @@ class Trapezoid:
             f : la fonction à intégrer
             a : la borne inférieure
             b : la borne supérieure
-            n : le pas
+            n : la valeur d'échantillonnage
     """
     def __init__(self, f, a, b, n):
         self.function = f
@@ -46,8 +46,8 @@ class Trapezoid:
 
                 Aire = h * [s + SOMME(1, n-1, f(xi))]
 
-            1) on calcul la valeur d'une unité d'aire (ua) pour n (le pas) ua entre les valeurs a et b
-            2) on calcul la valeur de f(x) avec x = (a + b) / 2, soit le milieu de la courbe aux bornes [a; b]
+            1) on calcul la valeur d'une unité d'aire (ua) pour n (le pas) ua's dans l'intervalle [a; b]
+            2) on calcul la valeur de f(x) avec x = (a + b) / 2, soit le milieu de la fonction dans l'intervalle [a; b]
             3) on calcul la valeur de f(x) avec x allant de 1 jusqu'à n avec un pas égal à h
         """
         h = (self.b - self.a) / self.n
