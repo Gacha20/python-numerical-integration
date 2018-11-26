@@ -65,9 +65,9 @@ class Trapezoid:
         """
             Calcul de l'estimation de l'erreur en :
             
-                1) Calculant la dérivée seconde de la fonction
-                2) En cherchant la valeur de x telle que f"(x) soit la plus grande valeur sur le domaine [a, b]
-                3) Calcul de l'estimation de l'erreur via la formule suivante :
+                1) on calcul la dérivée seconde de la fonction
+                2) on cherche la  valeur de x telle que pour tout x' appartenant à l'intervalle [a; b] on a f(x') <= f(x)
+                3) on calcul l'estimation de l'erreur via la formule suivante :
                     
                     - [ (b - a)^3 / (n² / 12) ] * M2
         """
