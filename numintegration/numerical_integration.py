@@ -51,7 +51,13 @@ class Trapezoid:
             3) on calcul la valeur de f(x) avec x allant de 1 jusqu'à n avec un pas égal à h
         """
         h = (self.b - self.a) / self.n
-        s = (self.function(self.a) + self.function(self.b)) / 2
+        s = 0
+        try:
+            s = (self.function(self.a) + self.function(self.b)) / 2
+        except ZeroDivisionError:
+            print("Erreur : la fonction ne convèrge pas")
+            return (0,0)
+
         for i in range(1, self.n):
             s += self.function(self.a + i * h)
         integration = s * h
